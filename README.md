@@ -1,0 +1,1 @@
+This the base point for Maandishi Craft Website
