@@ -27,8 +27,13 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Caveat', cursive;
 }
 
+body {
+    background-color: #f4f0ec ; /* Light grey background */
+    color: #333; /* Dark text for readability */
+}
+
 header {
-    background-color: #fff;
+    background-color: #f2f2f2;
     padding: 5px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: fixed;
@@ -42,12 +47,13 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 20px;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    margin-left: 10px;
+    /*margin-left: 10px;*/
 }
 
 .logo img {
@@ -55,15 +61,17 @@ nav {
     max-height: 50px;
     height: auto;
     width: auto;
-    margin-right: 160px;
+    /*margin-right: 160px;*/
 }
 
-.title {
-    flex: 2;
+.title-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
 }
 
-.title h1 {
+.title-container h1 {
     margin: 0;
     font-size: 24px;
     font-weight: bold;
@@ -92,7 +100,8 @@ body > section {
 }
 
 section {
-    padding: 60px 20px;
+    padding-top: 80px; /* Adjust as needed */
+    padding-bottom: 60px; /* Adjust as needed */
     text-align: center;
 }
 
@@ -164,44 +173,73 @@ section h2 {
     border-radius: 5px;
 }
 
-/*Styles for the Contact Info*/
-.contact-methods {
-    display: flex;
-    justify-content: center;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px 0;
-}
-
-.contact-item {
-    text-align: center;
-    margin: 0 10px; /* Adjust spacing between items */
-}
-
-.contact-item img {
-    width: 50px; /* Set a fixed width for all logos */
-    height: 50px; /* Set a fixed height for all logos */
-    object-fit: contain; /* Maintain aspect ratio and fit within dimensions */
-    margin-bottom: 5px; /* Adjust spacing between image and text */
-}
-
 .footer-container {
-    display: flex;
-    justify-content: center; /* Center align content horizontally */
-    align-items: center; /* Center align content vertically */
     background-color: #333;
     color: #fff;
-    text-align: center;
-    padding: 10px 0; /* Adjust padding as needed */
-    position: relative; /* Fixed position to stick to the bottom */
+    padding: 10px 0;
     width: 100%;
-    bottom: 0; /* Stick to the bottom of the viewport */
-    left: 0;
+    position: relative;
 }
 
 .footer-container footer {
-    width: 100%; /* Ensure footer takes full width */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
+
+.footer-container .left-section {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.footer-container .center-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-container .right-section {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.footer-container .contact-methods {
+    display: flex;
+    align-items: center;
+}
+
+.footer-container .contact-item {
+    text-align: center;
+    margin: 0 10px;
+}
+
+.footer-container .contact-item img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.footer-container .contact-item.email {
+    display: flex;
+    align-items: center;
+}
+
+.footer-container .contact-item.email img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    margin-right: 5px;
+}
+
+.footer-container .contact-item.email p {
+    margin: 0;
+}
+
+
 
 /* Additional Styles for notebook.html */
 .product-detail {
@@ -254,54 +292,4 @@ section h2 {
     font-size: 16px; /* Set font size for answers */
 }
 
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
 
-.contact-form h3 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.contact-form form {
-    display: grid;
-    gap: 10px;
-}
-
-.contact-form label {
-    font-weight: bold;
-}
-
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.contact-form textarea {
-    resize: vertical;
-}
-
-.contact-form input[type="submit"] {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.contact-form input[type="submit"]:hover {
-    background-color: #555;
-}
