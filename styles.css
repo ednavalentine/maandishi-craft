@@ -1,15 +1,41 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f8f8;
-    color: #333;
+/* Applying Manjari to normal text elements */
+@font-face {
+    font-family: 'Manjari';
+    src: url('Fonts/Manjari-Regular.ttf') format('truetype'),
+         url('Fonts/Manjari-Bold.ttf') format('truetype'),
+         url('Fonts/Manjari-Thin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+p, li, span, div, a {
+    font-family: 'Manjari', sans-serif;
+}
+
+/* Applying Caveat to heading tags */
+@font-face {
+    font-family: 'Caveat';
+    src: url('Fonts/Caveat-Bold.ttf') format('truetype'),
+         url('Fonts/Caveat-Medium.ttf') format('truetype'),
+         url('Fonts/Caveat-Regular.ttf') format('truetype'),
+         url('Fonts/Caveat-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Caveat', cursive;
 }
 
 header {
     background-color: #fff;
     padding: 5px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    left: 0
 }
 
 nav {
@@ -59,6 +85,10 @@ nav ul li a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
+}
+
+body > section {
+    padding-top: 100px; /* Adjust based on header height */
 }
 
 section {
@@ -134,14 +164,43 @@ section h2 {
     border-radius: 5px;
 }
 
-footer {
+/*Styles for the Contact Info*/
+.contact-methods {
+    display: flex;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.contact-item {
+    text-align: center;
+    margin: 0 10px; /* Adjust spacing between items */
+}
+
+.contact-item img {
+    width: 50px; /* Set a fixed width for all logos */
+    height: 50px; /* Set a fixed height for all logos */
+    object-fit: contain; /* Maintain aspect ratio and fit within dimensions */
+    margin-bottom: 5px; /* Adjust spacing between image and text */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center; /* Center align content horizontally */
+    align-items: center; /* Center align content vertically */
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 10px 0;
-    position: fixed;
+    padding: 10px 0; /* Adjust padding as needed */
+    position: relative; /* Fixed position to stick to the bottom */
     width: 100%;
-    bottom: 0;
+    bottom: 0; /* Stick to the bottom of the viewport */
+    left: 0;
+}
+
+.footer-container footer {
+    width: 100%; /* Ensure footer takes full width */
 }
 
 /* Additional Styles for notebook.html */
@@ -166,4 +225,83 @@ footer {
 
 .product-detail p {
     margin: 5px 0;
+}
+
+/* Updated CSS for FAQs */
+.faq {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.faq h3 {
+    font-size: 24px; /* Increase font size for questions */
+    margin-bottom: 20px; /* Provide space below the heading */
+}
+
+.faq details {
+    margin-bottom: 20px; /* Add space between each FAQ item */
+    border-bottom: 1px solid #ddd; /* Add a line divider */
+    padding-bottom: 10px; /* Adjust spacing between divider and content */
+}
+
+.faq summary {
+    font-weight: regular;
+    cursor: pointer;
+}
+
+.faq details p {
+    margin: 10px 0; /* Adjust margin for paragraphs */
+    font-size: 16px; /* Set font size for answers */
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-form form {
+    display: grid;
+    gap: 10px;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #555;
 }

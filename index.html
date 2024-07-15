@@ -15,7 +15,7 @@
                 </a>
             </div>
             <div class="title">
-                <h1>Maandishi Craft</h1>
+                <h1>MAANDISHI CRAFT</h1>
             </div>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -26,12 +26,14 @@
     </header>
     
     <section id="home">
-        <h2>Welcome to Maandishi Craft</h2>
+        <h2>Welcome to Maandishi Craft!</h2>
         <p>Your one-stop shop for custom-made stationery items.</p>
+        <p>You can find a variety of products that are avalaible and more products to come.</p>
+        <p>Stay Tuned for more!!!</p>
     </section>
     
     <section id="products">
-        <h2>The Products</h2>
+        <h2>Products</h2>
         <div class="product-grid">
             <div class="product" style="background-image: url('Images/IMG_20240710_215710.jpg');">
                 <div class="overlay">
@@ -70,13 +72,43 @@
     
     <section id="contact">
         <h2>Contact Us</h2>
-        <p>Follow us on Instagram: <a href="https://www.instagram.com/maandishicraft/?hl=en">@maandishicraft</a></p>
-        <p>WhatsApp us at: <a href="https://wa.me/yourwhatsappnumber">yourwhatsappnumber</a></p>
-        <p>Email us at: <a href="mailto:maandishicraft@gmail.com">maandishicraft@gmail.com</a></p>
-    </section>
+        <div class="contact-methods">
+            <div class="contact-item">
+                <a href="https://www.instagram.com/maandishicraft/?hl=en" target="_blank">
+                    <img src="Images/gram-removebg-preview.png" alt="Instagram">
+                </a>
+            </div>
+            <div class="contact-item">
+                <a href="https://wa.me/number" target="_blank">
+                    <img src="Images/whatsaapp-removebg-preview.png" alt="WhatsApp">
+                </a>
+            </div>
+            <div class="contact-item">
+                <a href="mailto:maandishicraft@gmail.com">
+                    <img src="Images/vecteezy_email-icon-for-your-website-mobile-presentation-and-logo_22648084-removebg-preview.png" alt="Email">
+                </a>
+            </div>
+        </div>
+        <div class="contact-form">
+            <h3>Send us a message</h3>
+            <form action="send_email.php" method="post">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br>
     
-    <footer>
-        <p>&copy; 2024 Maandishi Craft. All rights reserved.</p>
-    </footer>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br>
+    
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br>
+    
+                <input type="submit" value="Send">
+            </form>
+        </div>
+    </section>
+    <div class="footer-container">
+        <footer>
+            <p>&copy; 2024 Maandishi Craft. All rights reserved.</p>
+        </footer>
+    </div>
 </body>
 </html>
