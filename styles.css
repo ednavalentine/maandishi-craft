@@ -27,6 +27,14 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Caveat', cursive;
 }
 
+#home {
+    padding-bottom: 20px; /* Decrease padding-bottom to reduce space after the home section */
+}
+
+#products {
+    padding-top: 20px; /* Decrease padding-top to reduce space before the products section */
+}
+
 body {
     background-color: #f4f0ec ; /* Light grey background */
     color: #333; /* Dark text for readability */
