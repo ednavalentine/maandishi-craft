@@ -33,6 +33,11 @@ h1, h2, h3, h4, h5, h6 {
 
 #products {
     padding-top: 20px; /* Decrease padding-top to reduce space before the products section */
+    padding-bottom: 10px;
+}
+
+#faq {
+    padding-top: 10px; /* Reduce space before the FAQ section */
 }
 
 body {
