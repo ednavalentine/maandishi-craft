@@ -419,27 +419,6 @@ section {
         display: none; /* Hide the checkbox on smaller devices */
     }
 
-    .menu .left-section {
-        display: block;
-        text-align: center;
-        padding: 10px;
-        background-color: #f2f2f2; /* Match the background color of the menu */
-    }
-
-    .menu .left-section img {
-        width: 30px;
-        height: 30px;
-        object-fit: contain;
-        margin-right: 5px;
-    }
-
-    .menu .left-section p {
-        margin: 0;
-        font-weight: bold;
-    }
-    .footer-container .left-section {
-        display: none;
-    }
 }
 
 @media (max-width: 480px) {
