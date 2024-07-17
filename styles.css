@@ -53,7 +53,7 @@ header {
     top: 0;
     width: 100%;
     z-index: 1000;
-    left: 0
+    left: 0;
 }
 
 nav {
@@ -66,7 +66,6 @@ nav {
 .logo {
     display: flex;
     align-items: center;
-    /*margin-left: 10px;*/
 }
 
 .logo img {
@@ -74,7 +73,6 @@ nav {
     max-height: 50px;
     height: auto;
     width: auto;
-    /*margin-right: 160px;*/
 }
 
 .title-container {
@@ -118,7 +116,7 @@ section {
     text-align: center;
 }
 
-section h2 {
+.section-title {
     margin-bottom: 20px;
 }
 
@@ -252,8 +250,6 @@ section h2 {
     margin: 0;
 }
 
-
-
 /* Additional Styles for notebook.html */
 .product-detail {
     background-color: #fff;
@@ -305,52 +301,152 @@ section h2 {
     font-size: 16px; /* Set font size for answers */
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
+/* Desktop Styles */
+@media (min-width: 769px) {
+    #menu-toggle {
+        display: none !important; /* Hide the checkbox */
     }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
+    .menu-icon {
+        display: none !important; /* Hide the hamburger menu */
     }
-
-    nav ul li {
-        margin: 5px 0;
+    .menu {
+        display: flex !important; /* Ensure the menu is visible */
     }
-
     .title-container {
-        position: static;
-        transform: none;
+        display: block; /* Display the title on desktop */
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
         text-align: center;
     }
 
-    .product-grid {
-        grid-template-columns: 1fr; /* Set to 1 column */
+    .title-container h1 {
+        margin: 0;
+        font-size: 24px;
+        font-weight: bold;
     }
 
-    .footer-container footer {
+    .menu .left-section {
+        display: none;
+    }
+}
+
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .title-container {
+        display: none; /* Hide the title on smaller devices */
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px; /* Adjust padding */
+    }
+
+    .logo {
+        order: 1; /* Ensure logo comes first in the flex order */
+        flex: 1; /* Take up available space */
+    }
+
+    .menu-icon {
+        order: 2; /* Ensure hamburger icon comes second in the flex order */
+        display: block; /* Show the hamburger menu icon */
+        cursor: pointer; /* Change cursor to pointer */
+        position: relative; /* Adjust position */
+        z-index: 1001; /* Ensure it overlays the checkbox */
+        font-size: 24px; /* Adjust icon size */
+    }
+
+    .menu {
+        position: fixed; /* Fixed position so it's always visible */
+        top: 0;
+        right: -100%; /* Initially off-screen to the right */
+        width: 80%; /* Adjust width as needed */
+        max-width: 300px; /* Maximum width of the menu */
+        height: 100%; /* Full height of the viewport */
+        background-color: #f2f2f2;
+        display: flex;
         flex-direction: column;
         align-items: center;
+        transition: right 0.3s ease; /* Smooth slide animation */
+        z-index: 1000; /* Ensure it overlays other content */
+        padding: 20px; /* Add padding for better spacing */
     }
 
-    .footer-container .left-section, .footer-container .center-section, .footer-container .right-section {
-        flex: unset;
+    /* Show menu when hamburger icon is clicked */
+    .menu-icon:hover + #menu-toggle:checked ~ .menu,
+    #menu-toggle:checked ~ .menu {
+        right: 0; /* Slide in the menu from the right */
     }
 
-    .footer-container .contact-item {
-        margin: 10px 0;
+    .menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        width: 100%; /* Ensure full width */
+        text-align: left; /* Left-align menu items */
+        flex-direction: column;
+    }
+
+    .menu ul li {
+        margin: 10px 0; /* Margin between menu items */
+        padding: 10px 0; /* Padding around each menu item */
+        border-bottom: 1px solid #ccc; /* Add a bottom border for separation */
+        width: 100%; /* Ensure full width */
+        text-align: center; /* Center align text */
+    }
+
+    .menu ul li:last-child {
+        border-bottom: none; /* Remove bottom border from the last menu item */
+    }
+
+    .menu ul li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        display: block; /* Ensure menu items stack vertically */
+        transition: color 0.3s ease; /* Smooth color transition */
+    }
+
+    .menu ul li a:hover {
+        color: #666; /* Darken text on hover */
+    }
+
+    #menu-toggle {
+        display: none; /* Hide the checkbox on smaller devices */
+    }
+
+    .menu .left-section {
+        display: block;
+        text-align: center;
+        padding: 10px;
+        background-color: #f2f2f2; /* Match the background color of the menu */
+    }
+
+    .menu .left-section img {
+        width: 30px;
+        height: 30px;
+        object-fit: contain;
+        margin-right: 5px;
+    }
+
+    .menu .left-section p {
+        margin: 0;
+        font-weight: bold;
+    }
+    .footer-container .left-section {
+        display: none;
     }
 }
 
 @media (max-width: 480px) {
-    header {
-        padding: 10px 0;
-    }
+    /* Further adjustments for smaller screens */
 
-    nav {
-        padding: 0 10px;
+    header {
+        padding: 10px 0; /* Adjust header padding */
     }
 
     .logo img {
@@ -359,29 +455,16 @@ section h2 {
     }
 
     .title-container h1 {
-        font-size: 20px;
+        font-size: 18px; /* Further reduce font size */
     }
 
-    .product-info p {
-        font-size: 14px;
+    .menu {
+        top: 50px; /* Adjust menu position */
     }
 
-    .btn {
-        padding: 8px 16px;
-        font-size: 14px;
-    }
-
-    .footer-container {
-        padding: 5px 0;
-    }
-
-    .footer-container .contact-item.email img {
-        width: 25px;
-        height: 25px;
-    }
-
-    .footer-container .contact-item img {
-        width: 25px;
-        height: 25px;
+    .menu ul li a {
+        padding: 8px 0; /* Adjust padding for menu items */
+        font-size: 14px; /* Reduce font size */
     }
 }
+
