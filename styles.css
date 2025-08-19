@@ -2,8 +2,14 @@
 @font-face {
     font-family: 'Manjari';
     src: url('Fonts/Manjari-Regular.ttf') format('truetype'),
+         url('Fonts/Manjari-Regular.woff2') format('woff2'),
+         url('Fonts/Manjari-Regular.woff') format('woff'),
          url('Fonts/Manjari-Bold.ttf') format('truetype'),
-         url('Fonts/Manjari-Thin.ttf') format('truetype');
+         url('Fonts/Manjari-Bold.woff2') format('woff2'),
+         url('Fonts/Manjari-Bold.woff') format('woff'),
+         url('Fonts/Manjari-Thin.ttf') format('truetype'),
+         url('Fonts/Manjari-Thin.woff2') format('woff2'),
+         url('Fonts/Manjari-Thin.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -16,9 +22,17 @@ p, li, span, div, a {
 @font-face {
     font-family: 'Caveat';
     src: url('Fonts/Caveat-Bold.ttf') format('truetype'),
+         url('Fonts/Caveat-Bold.woff2') format('woff2'),
+         url('Fonts/Caveat-Bold.woff') format('woff'),
          url('Fonts/Caveat-Medium.ttf') format('truetype'),
+         url('Fonts/Caveat-Medium.woff2') format('woff2'),
+         url('Fonts/Caveat-Medium.woff') format('woff'),
          url('Fonts/Caveat-Regular.ttf') format('truetype'),
-         url('Fonts/Caveat-SemiBold.ttf') format('truetype');
+         url('Fonts/Caveat-Regular.woff2') format('woff2'),
+         url('Fonts/Caveat-Regular.woff') format('woff'),
+         url('Fonts/Caveat-SemiBold.ttf') format('truetype'),
+         url('Fonts/Caveat-SemiBold.woff2') format('woff2'),
+         url('Fonts/Caveat-SemiBold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -41,12 +55,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-    background-color: #f4f0ec ; /* Light grey background */
-    color: #333; /* Dark text for readability */
+    background-color: #f8f6f4 ; /* Light grey background */
+    color: #5a4a42; /* Dark text for readability */
 }
 
 header {
-    background-color: #f2f2f2;
+    background-color: #e8e2dd;
     padding: 5px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: fixed;
@@ -102,7 +116,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: #5a4a42;
     font-weight: bold;
 }
 
@@ -176,8 +190,8 @@ section {
 }
 
 .btn {
-    background-color: #fff;
-    color: #333;
+    background-color: #a67c52;
+    color: #fff;
     padding: 10px 20px;
     text-decoration: none;
     font-weight: bold;
@@ -185,8 +199,8 @@ section {
 }
 
 .footer-container {
-    background-color: #333;
-    color: #fff;
+    background-color: #5a4a42;
+    color: #f8f6f4;
     padding: 10px 0;
     width: 100%;
     position: relative;
