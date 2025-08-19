@@ -1,16 +1,28 @@
 /* Applying Manjari to normal text elements */
 @font-face {
     font-family: 'Manjari';
-    src: url('Fonts/Manjari-Regular.ttf') format('truetype'),
-         url('Fonts/Manjari-Regular.woff2') format('woff2'),
+    src: url('Fonts/Manjari-Regular.woff2') format('woff2'),
          url('Fonts/Manjari-Regular.woff') format('woff'),
-         url('Fonts/Manjari-Bold.ttf') format('truetype'),
-         url('Fonts/Manjari-Bold.woff2') format('woff2'),
-         url('Fonts/Manjari-Bold.woff') format('woff'),
-         url('Fonts/Manjari-Thin.ttf') format('truetype'),
-         url('Fonts/Manjari-Thin.woff2') format('woff2'),
-         url('Fonts/Manjari-Thin.woff') format('woff');
+         url('Fonts/Manjari-Regular.ttf') format('truetype');
     font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Manjari';
+    src: url('Fonts/Manjari-Bold.woff2') format('woff2'),
+         url('Fonts/Manjari-Bold.woff') format('woff'),
+         url('Fonts/Manjari-Bold.ttf') format('truetype');
+    font-weight: bold; /* This is what links the bold file to the bold weight */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Manjari';
+    src: url('Fonts/Manjari-Thin.woff2') format('woff2'),
+         url('Fonts/Manjari-Thin.woff') format('woff'),
+         url('Fonts/Manjari-Thin.ttf') format('truetype');
+    font-weight: 200; /* Use a numeric value for "Thin" */
     font-style: normal;
 }
 
@@ -18,22 +30,40 @@ p, li, span, div, a {
     font-family: 'Manjari', sans-serif;
 }
 
-/* Applying Caveat to heading tags */
+/* --- Caveat Font Family --- */
 @font-face {
     font-family: 'Caveat';
-    src: url('Fonts/Caveat-Bold.ttf') format('truetype'),
-         url('Fonts/Caveat-Bold.woff2') format('woff2'),
-         url('Fonts/Caveat-Bold.woff') format('woff'),
-         url('Fonts/Caveat-Medium.ttf') format('truetype'),
-         url('Fonts/Caveat-Medium.woff2') format('woff2'),
-         url('Fonts/Caveat-Medium.woff') format('woff'),
-         url('Fonts/Caveat-Regular.ttf') format('truetype'),
-         url('Fonts/Caveat-Regular.woff2') format('woff2'),
+    src: url('Fonts/Caveat-Regular.woff2') format('woff2'),
          url('Fonts/Caveat-Regular.woff') format('woff'),
-         url('Fonts/Caveat-SemiBold.ttf') format('truetype'),
-         url('Fonts/Caveat-SemiBold.woff2') format('woff2'),
-         url('Fonts/Caveat-SemiBold.woff') format('woff');
+         url('Fonts/Caveat-Regular.ttf') format('truetype');
     font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Caveat';
+    src: url('Fonts/Caveat-Medium.woff2') format('woff2'),
+         url('Fonts/Caveat-Medium.woff') format('woff'),
+         url('Fonts/Caveat-Medium.ttf') format('truetype');
+    font-weight: 500; /* Use a numeric value for "Medium" */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Caveat';
+    src: url('Fonts/Caveat-SemiBold.woff2') format('woff2'),
+         url('Fonts/Caveat-SemiBold.woff') format('woff'),
+         url('Fonts/Caveat-SemiBold.ttf') format('truetype');
+    font-weight: 600; /* Use a numeric value for "SemiBold" */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Caveat';
+    src: url('Fonts/Caveat-Bold.woff2') format('woff2'),
+         url('Fonts/Caveat-Bold.woff') format('woff'),
+         url('Fonts/Caveat-Bold.ttf') format('truetype');
+    font-weight: bold; /* This is what links the bold file to the bold weight */
     font-style: normal;
 }
 
