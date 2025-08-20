@@ -1,4 +1,4 @@
-/* Applying Manjari to normal text elements */
+/* --- Font Styles --- */
 @font-face {
     font-family: 'Manjari';
     src: url('Fonts/Manjari-Regular.woff2') format('woff2'),
@@ -13,7 +13,7 @@
     src: url('Fonts/Manjari-Bold.woff2') format('woff2'),
          url('Fonts/Manjari-Bold.woff') format('woff'),
          url('Fonts/Manjari-Bold.ttf') format('truetype');
-    font-weight: bold; /* This is what links the bold file to the bold weight */
+    font-weight: bold;
     font-style: normal;
 }
 
@@ -22,7 +22,7 @@
     src: url('Fonts/Manjari-Thin.woff2') format('woff2'),
          url('Fonts/Manjari-Thin.woff') format('woff'),
          url('Fonts/Manjari-Thin.ttf') format('truetype');
-    font-weight: 200; /* Use a numeric value for "Thin" */
+    font-weight: 200;
     font-style: normal;
 }
 
@@ -45,7 +45,7 @@ p, li, span, div, a {
     src: url('Fonts/Caveat-Medium.woff2') format('woff2'),
          url('Fonts/Caveat-Medium.woff') format('woff'),
          url('Fonts/Caveat-Medium.ttf') format('truetype');
-    font-weight: 500; /* Use a numeric value for "Medium" */
+    font-weight: 500;
     font-style: normal;
 }
 
@@ -54,7 +54,7 @@ p, li, span, div, a {
     src: url('Fonts/Caveat-SemiBold.woff2') format('woff2'),
          url('Fonts/Caveat-SemiBold.woff') format('woff'),
          url('Fonts/Caveat-SemiBold.ttf') format('truetype');
-    font-weight: 600; /* Use a numeric value for "SemiBold" */
+    font-weight: 600;
     font-style: normal;
 }
 
@@ -63,7 +63,7 @@ p, li, span, div, a {
     src: url('Fonts/Caveat-Bold.woff2') format('woff2'),
          url('Fonts/Caveat-Bold.woff') format('woff'),
          url('Fonts/Caveat-Bold.ttf') format('truetype');
-    font-weight: bold; /* This is what links the bold file to the bold weight */
+    font-weight: bold;
     font-style: normal;
 }
 
@@ -71,54 +71,30 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Caveat', cursive;
 }
 
-#home {
-    padding-bottom: 20px; /* Decrease padding-bottom to reduce space after the home section */
-}
-
-#products {
-    padding-top: 20px; /* Decrease padding-top to reduce space before the products section */
-    padding-bottom: 10px;
-}
-
-#faq {
-    padding-top: 10px; /* Reduce space before the FAQ section */
-}
-
+/* --- Base Styles --- */
 body {
-    background-color: #f8f6f4 ; /* Light grey background */
-    color: #5a4a42; /* Dark text for readability */
+    background-color: #f8f6f4;
+    color: #5a4a42;
+    margin: 0;
+    padding: 0;
 }
 
 header {
     background-color: #e8e2dd;
-    padding: 5px 0;
+    padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    top: 0;
-    width: 100%;
     z-index: 1000;
-    left: 0;
-}
-
-nav {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
-
-.logo {
-    display: flex;
     align-items: center;
 }
 
 .logo img {
     max-width: 50px;
-    max-height: 50px;
     height: auto;
-    width: auto;
 }
 
+/* --- Fixes for Title Container --- */
 .title-container {
     position: absolute;
     left: 50%;
@@ -128,45 +104,39 @@ nav {
 
 .title-container h1 {
     margin: 0;
-    font-size: 24px;
+    font-size: 24px; /* Use a fluid font size */
     font-weight: bold;
 }
 
-nav ul {
-    display: flex;
-    justify-content: flex-end;
+.menu ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    gap: 20px;
 }
 
-nav ul li {
-    margin: 0 10px;
-}
-
-nav ul li a {
+.menu ul li a {
     text-decoration: none;
     color: #5a4a42;
     font-weight: bold;
 }
 
-body > section {
-    padding-top: 100px; /* Adjust based on header height */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 28px;
 }
 
 section {
-    padding-top: 80px; /* Adjust as needed */
-    padding-bottom: 60px; /* Adjust as needed */
+    padding-top: 80px;
+    padding-bottom: 60px;
     text-align: center;
-}
-
-.section-title {
-    margin-bottom: 20px;
 }
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Set to 2 columns */
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     justify-content: center;
     max-width: 800px;
@@ -178,7 +148,7 @@ section {
     background-size: cover;
     background-position: center;
     width: 100%;
-    padding-top: 75%; /* Maintain aspect ratio */
+    padding-top: 75%;
     border: 1px solid #ddd;
     border-radius: 5px;
     overflow: hidden;
@@ -219,6 +189,19 @@ section {
     font-weight: bold;
 }
 
+.product-detail {
+    text-align: center;
+    padding: 20px;
+}
+
+.product-detail img {
+    max-width: 100%; /* Ensures the image doesn't exceed its container's width */
+    height: auto; /* Maintains the image's aspect ratio */
+    display: block; /* Removes any extra space below the image */
+    margin: 0 auto; /* Centers the image */
+    border-radius: 5px;
+}
+
 .btn {
     background-color: #a67c52;
     color: #fff;
@@ -228,134 +211,105 @@ section {
     border-radius: 5px;
 }
 
-.footer-container {
-    background-color: #5a4a42;
-    color: #f8f6f4;
-    padding: 10px 0;
-    width: 100%;
-    position: relative;
-}
-
-.footer-container footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.footer-container .left-section {
-    display: flex;
-    align-items: center;
-    flex: 1;
-}
-
-.footer-container .center-section {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-
-.footer-container .right-section {
-    display: flex;
-    align-items: center;
-    flex: 1;
-    justify-content: flex-end;
-}
-
-.footer-container .contact-methods {
-    display: flex;
-    align-items: center;
-}
-
-.footer-container .contact-item {
-    text-align: center;
-    margin: 0 10px;
-}
-
-.footer-container .contact-item img {
-    width: 30px;
-    height: 30px;
-    object-fit: contain;
-}
-
-.footer-container .contact-item.email {
-    display: flex;
-    align-items: center;
-}
-
-.footer-container .contact-item.email img {
-    width: 30px;
-    height: 30px;
-    object-fit: contain;
-    margin-right: 5px;
-}
-
-.footer-container .contact-item.email p {
-    margin: 0;
-}
-
-/* Additional Styles for notebook.html */
-.product-detail {
-    background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: left;
-}
-
-.product-detail img {
-    max-width: 100%;
-    border-radius: 5px;
-}
-
-.product-detail h3 {
-    font-size: 18px;
-    margin: 10px 0 5px;
-}
-
-.product-detail p {
-    margin: 5px 0;
-}
-
-/* Updated CSS for FAQs */
-.faq {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.faq h3 {
-    font-size: 24px; /* Increase font size for questions */
-    margin-bottom: 20px; /* Provide space below the heading */
-}
-
 .faq details {
-    margin-bottom: 20px; /* Add space between each FAQ item */
-    border-bottom: 1px solid #ddd; /* Add a line divider */
-    padding-bottom: 10px; /* Adjust spacing between divider and content */
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
 }
 
 .faq summary {
-    font-weight: regular;
+    font-weight: normal;
     cursor: pointer;
 }
 
 .faq details p {
-    margin: 10px 0; /* Adjust margin for paragraphs */
-    font-size: 16px; /* Set font size for answers */
+    margin: 10px 0;
+    font-size: 16px;
 }
 
-/* Desktop Styles */
+.footer-container {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-container footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.socials-container {
+    background-color: #a67c52;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 10px;
+    flex: 1;
+    min-width: 250px;
+}
+
+.socials-container h3 {
+    margin-top: 0;
+}
+
+.contact-methods {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-methods .contact-item {
+    margin: 0 10px;
+}
+
+.contact-methods .contact-item img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.email-container {
+    padding: 20px;
+    margin: 10px;
+    flex: 1;
+    min-width: 250px;
+}
+
+.email-container h3 {
+    margin-top: 0;
+}
+
+.copyright-container {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #555;
+    padding-top: 10px;
+}
+
+.copyright-container p {
+    margin: 0;
+    font-size: 14px;
+    color: #bbb;
+}
+
+/* --- Desktop Styles (769px and up) --- */
 @media (min-width: 769px) {
-    #menu-toggle {
-        display: none !important; /* Hide the checkbox */
+    header {
+        position: relative;
     }
-    .menu-icon {
-        display: none !important; /* Hide the hamburger menu */
-    }
-    .menu {
-        display: flex !important; /* Ensure the menu is visible */
-    }
+
     .title-container {
         display: block; /* Display the title on desktop */
         position: absolute;
@@ -363,113 +317,102 @@ section {
         transform: translateX(-50%);
         text-align: center;
     }
-
-    .title-container h1 {
-        margin: 0;
-        font-size: 24px;
-        font-weight: bold;
+    
+    .menu ul {
+        display: flex;
+        gap: 20px;
     }
-
-    .menu .left-section {
+    
+    .menu-icon {
         display: none;
     }
 }
 
-
-
-/* Responsive design */
+/* --- Mobile Styles (768px and down) --- */
 @media (max-width: 768px) {
+    body {
+        padding-top: 60px;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #e8e2dd; /* Ensure background color is visible */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        display: flex; /* Use flexbox to align items */
+        justify-content: space-between; /* Place items at opposite ends */
+        align-items: center; /* Vertically align items */
+        padding: 10px 0px; /* Add padding for spacing */
+    }
+
+    .logo, .menu-icon {
+        padding: 0 10px; /* Add padding directly to the logo and menu icon */
+    }
+
     .title-container {
-        display: none; /* Hide the title on smaller devices */
-    }
-
-    nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px; /* Adjust padding */
-    }
-
-    .logo {
-        order: 1; /* Ensure logo comes first in the flex order */
-        flex: 1; /* Take up available space */
-    }
-
-    .menu-icon {
-        order: 2; /* Ensure hamburger icon comes second in the flex order */
-        display: block; /* Show the hamburger menu icon */
-        cursor: pointer; /* Change cursor to pointer */
-        position: relative; /* Adjust position */
-        z-index: 1001; /* Ensure it overlays the checkbox */
-        font-size: 24px; /* Adjust icon size */
+        display: none;
     }
 
     .menu {
-        position: fixed; /* Fixed position so it's always visible */
+        position: fixed;
         top: 0;
-        right: -100%; /* Initially off-screen to the right */
-        width: 80%; /* Adjust width as needed */
-        max-width: 300px; /* Maximum width of the menu */
-        height: 100%; /* Full height of the viewport */
-        background-color: #f2f2f2;
+        right: -100%; 
+        width: 80%;
+        max-width: 300px;
+        height: 100%;
+        background-color: #ffffff;
         display: flex;
         flex-direction: column;
         align-items: center;
-        transition: right 0.3s ease; /* Smooth slide animation */
-        z-index: 1000; /* Ensure it overlays other content */
-        padding: 20px; /* Add padding for better spacing */
+        transition: right 0.3s ease-in-out;
+        z-index: 1000;
+        padding-top: 80px;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
     }
 
-    /* Show menu when hamburger icon is clicked */
-    .menu-icon:hover + #menu-toggle:checked ~ .menu,
-    #menu-toggle:checked ~ .menu {
-        right: 0; /* Slide in the menu from the right */
+    .menu.show {
+        right: 0;
     }
 
     .menu ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        width: 100%; /* Ensure full width */
-        text-align: left; /* Left-align menu items */
         flex-direction: column;
+        width: 100%;
     }
 
     .menu ul li {
-        margin: 10px 0; /* Margin between menu items */
-        padding: 10px 0; /* Padding around each menu item */
-        border-bottom: 1px solid #ccc; /* Add a bottom border for separation */
-        width: 100%; /* Ensure full width */
-        text-align: center; /* Center align text */
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+        border-bottom: 1px solid #ddd;
     }
-
+    
     .menu ul li:last-child {
-        border-bottom: none; /* Remove bottom border from the last menu item */
+        border-bottom: none;
     }
 
-    .menu ul li a {
-        text-decoration: none;
-        color: #333;
-        font-weight: bold;
-        display: block; /* Ensure menu items stack vertically */
-        transition: color 0.3s ease; /* Smooth color transition */
+    .menu-icon {
+        display: block; /* Show the hamburger icon on mobile */
     }
 
-    .menu ul li a:hover {
-        color: #666; /* Darken text on hover */
+    .product-grid {
+        grid-template-columns: 1fr; /* Change to a single column */
     }
 
-    #menu-toggle {
-        display: none; /* Hide the checkbox on smaller devices */
+    .product {
+        padding-top: 100%; /* Adjust padding for better square aspect ratio */
+        width: 100%;
+        max-width: 300px; /* Optional: limit the product width for better aesthetics */
+        margin: 0 auto 20px auto; /* Add margin to space out the products */
     }
-
 }
 
+/* --- Small Mobile Styles (480px and down) --- */
 @media (max-width: 480px) {
-    /* Further adjustments for smaller screens */
-
     header {
-        padding: 10px 0; /* Adjust header padding */
+        padding: 10px 0;
     }
 
     .logo img {
@@ -478,15 +421,6 @@ section {
     }
 
     .title-container h1 {
-        font-size: 18px; /* Further reduce font size */
-    }
-
-    .menu {
-        top: 50px; /* Adjust menu position */
-    }
-
-    .menu ul li a {
-        padding: 8px 0; /* Adjust padding for menu items */
-        font-size: 14px; /* Reduce font size */
+        font-size: 18px;
     }
 }
