@@ -27,12 +27,46 @@
         <div class="menu-icon" onclick="toggleMenu()">☰</div>
     </header>
     
+        <section id="new-products-banner">
+        <a href="newproducts.html" class="slideshow-link">
+        <h2>✨ New Products Alert! ✨</h2>
+        <div class="slideshow-container">
+            <div class="slideshow-track">
+                <div class="slideshow-item">
+                    <img src="Images/WhatsApp Image 2025-08-24 at 1.28.25 PM.jpeg" alt="New Product 1">
+                </div>
+                <div class="slideshow-item">
+                    <img src="Images/WhatsApp Image 2025-08-24 at 1.33.44 PM.jpeg" alt="New Product 2">
+                </div>
+                <div class="slideshow-item">
+                    <img src="Images/WhatsApp Image 2025-08-24 at 1.28.26 PM (1).jpeg" alt="New Product 3">
+                </div>
+                <div class="slideshow-item">
+                    <img src="Images/WhatsApp Image 2025-08-24 at 1.28.30 PM.jpeg" alt="New Product 4">
+                </div>
+                <div class="slideshow-item">
+                    <img src="Images/WhatsApp Image 2025-08-24 at 1.28.31 PM.jpeg" alt="New Product 5">
+                </div>
+                <div class="slideshow-item">
+                    <img src="Images/WhatsApp Image 2025-08-24 at 1.28.32 PM.jpeg" alt="New Product 6">
+                </div>
+            </div>
+        </div>
+        </a>
+        <div class="slideshow-dots">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+        </section>
+
     <section id="home">
         <h2>Welcome to Maandishi Craft!</h2>
         <p>Your one-stop shop for custom-made stationery items.</p>
         <p>You can find a variety of products that are avalaible and more products to come.</p>
         <p>Stay tuned for more!!!</p>
     </section>
+
+
     
     <section id="products">
         <h2>Products</h2>
@@ -126,15 +160,14 @@
         </div>
     </footer>
     </div>
+    <script src="slideshow.js"></script>
     <script>
         function toggleMenu() {
         const menu = document.querySelector('.menu');
         menu.classList.toggle('show');
     }
-
     // Select all <a> tags that are inside an element with the class '.menu'
     const menuLinks = document.querySelectorAll('.menu a');
-
     menuLinks.forEach(link => {
         link.addEventListener('click', () => {
             const menu = document.querySelector('.menu');

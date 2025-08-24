@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardcover Notebooks - Maandishi Craft</title>
+    <link rel="shortcut icon" type="image/x-icon" href="Images/new-favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="Images/MC_Sticker-removebg-preview.png" alt="Maandishi Craft Logo">
+            </a>
+        </div>
+        <div class="title-container">
+            <h1>MAANDISHI CRAFT</h1>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#products">Products</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+            </ul>
+        </nav>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </header>
+
+    <section id="new-products">
+        <h2>Introducing Our New Hardcover Notebooks!</h2>
+        <p>We're thrilled to announce the launch of our premium hardcover notebook collection, designed for durability and style. Choose the perfect version for your needs!</p>
+        
+        <div class="product-grid">
+            <div class="product-detail">
+                <img src="Images/WhatsApp Image 2025-08-24 at 1.28.27 PM (1).jpeg" alt="My Thoughts Go Brrr! Notebook">
+                <h3>Completely clothed Hardcover version</h3>
+                <p>This hardcover version comes in a fully covered canvas material with a secured hardcover, ensures that your book lasts very long. Comes in 120 pages only.</p>
+            </div>
+            
+            <div class="product-detail">
+                <img src="Images/WhatsApp Image 2025-08-24 at 1.28.24 PM (1).jpeg" alt="My Thoughts Go Brrr! Notebook">
+                <h3>Secured Cloth Spine Hardcover version</h3>
+                <p>This hardcover notebook comes as a wide version of the A5 books you are used to, but with a twist, well a secured spine backing that ensures your book lasts long. Comes in 120 pages only.</p>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+    <div class="faq">
+        <h3>Questions you may have</h3>
+        <details>
+            <summary>How long does production take?</summary>
+            <p>This takes 3 - 4 days to create this notebook for both versions. Take into account when placing an order</p>
+        </details>
+        <details>
+            <summary>Does this notebook come with a specific design?</summary>
+            <p>No. You are open to choose which design you want as a notebook version. You can click the Products at the top right to check my designs</p>
+        </details>
+        <details>
+            <summary>What sizes can I work on?</summary>
+            <p>Currently I can create A5 sizes but in the future, other sizes will be added.</p>
+        </details>
+        <details>
+            <summary>Is the canvas materials comes in black?</summary>
+            <p>Yes. For now it comes in black but later on there will be more colour selections as I continue adding new designs.</p>
+        </details>
+    </div>
+
+        <br>
+        <a href="index.html#products" class="btn">Back to Products</a>
+    </section>
+
+    <div class="footer-container">
+    <footer>
+        <div class="footer-content">
+            <div class="socials-container">
+                <h3>Follow My Socials:</h3>
+                <div class="contact-methods">
+                    <div class="contact-item">
+                        <a href="https://www.facebook.com/profile.php?id=61563170331026" target="_blank">
+                            <img src="Images/round-black-facebook-fb-logo-icon-sign-701751695134781upkxjlqwck-removebg-preview.png" alt="Facebook">
+                        </a>
+                    </div>
+                    <div class="contact-item">
+                        <a href="https://www.instagram.com/maandishicraft/?hl=en" target="_blank">
+                            <img src="Images/2-23339_black-and-white-instagram-logo-instagram-logo-2018-removebg-preview.png" alt="Instagram">
+                        </a>
+                    </div>
+                    <div class="contact-item">
+                        <a href="https://wa.me/+254789619506" target="_blank">
+                            <img src="Images/whatsaapp-removebg-preview.png" alt="WhatsApp">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="email-container">
+                <h3>For Business Queries</h3>
+                <p>Email me at: <strong>maandishicraft@gmail.com</strong></p>
+            </div>
+        </div>
+        <div class="copyright-container">
+            <p>&copy; 2025 Maandishi Craft. All rights reserved.</p>
+        </div>
+    </footer>
+    </div>
+    <script>
+        function toggleMenu() {
+        const menu = document.querySelector('.menu');
+        menu.classList.toggle('show');
+    }
+
+    const menuLinks = document.querySelectorAll('.menu a');
+
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            const menu = document.querySelector('.menu');
+            menu.classList.remove('show');
+        });
+    });
+    </script>
+</body>
+</html>

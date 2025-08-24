@@ -304,6 +304,71 @@ section {
     color: #bbb;
 }
 
+/* --- New Products Banner --- */
+#new-products-banner {
+    padding: 0px 20px 20px 20px;
+    text-align: center;
+    background-color: #e8e2dd;
+    position: relative;
+}
+
+#new-products-banner h2 {
+    margin-top: 0;
+    padding-top: 20px;
+    color: #a67c52;
+}
+
+.slideshow-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.slideshow-container {
+    max-width: 700px; /* Adjust this to fit 3 images */
+    margin: auto;
+    border-radius: 8px;
+    overflow: hidden; /* This is key - it hides images outside the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slideshow-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slideshow-item {
+    min-width: calc(100% / 3); /* Make each item take up 1/3 of the container */
+}
+
+.slideshow-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Slideshow navigation dots */
+.slideshow-dots {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.6s ease;
+}
+
+.dot.active {
+    background-color: #a67c52;
+}
+
+
 /* --- Desktop Styles (769px and up) --- */
 @media (min-width: 769px) {
     header {
@@ -330,6 +395,12 @@ section {
 
 /* --- Mobile Styles (768px and down) --- */
 @media (max-width: 768px) {
+
+    @media (max-width: 768px) {
+    .slideshow-item {
+        min-width: 100%; /* Show one image at a time on mobile */
+    }
+
     body {
         padding-top: 60px;
     }
@@ -423,4 +494,5 @@ section {
     .title-container h1 {
         font-size: 18px;
     }
+}
 }
